@@ -1,0 +1,133 @@
+/* START FADE-IN LOGIN/REGISTER PAGE */
+.fade-in-grid1 {
+  animation: fadeInGrid1 0.5s 1;
+}
+@keyframes fadeInGrid1 {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+}
+.fade-in-grid1-title {
+  animation: fadeInGrid1_Title 1s 1;
+}
+@keyframes fadeInGrid1_Title {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+}
+.fade-in-grid2 {
+  animation: fadeInGrid2 0.5s 1;
+}
+@keyframes fadeInGrid2 {
+    0% { 
+        opacity: 0; 
+        transform: translateX(50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+}
+/* END FADE-IN LOGIN/REGISTER PAGE */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* START FADE-IN MODAL */
+.modal-content {
+    animation: fadeInModal 0.5s 1;
+}
+@keyframes fadeInModal {
+    0% { 
+        opacity: 0; 
+        transform: translateY(-100px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+}
+.fade-out-modal {
+    opacity: 0; 
+    animation: fadeOutModal 0.5s 1;
+}
+@keyframes fadeOutModal {
+    0% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+    100% { 
+      opacity: 0; 
+      transform: translateY(-100px);
+    }
+}
+.modalImage {
+    opacity: 1;
+    animation: fadeInModalImage 0.5s 1;
+}
+@keyframes fadeInModalImage {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.5);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+.fade-out-modalImage {
+    opacity: 0;
+    animation: fadeOutModalImage 0.5s 1;
+}
+@keyframes fadeOutModalImage {
+    0% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+    100% { 
+        opacity: 0; 
+        transform: scale(0.5);
+    }
+}
+/* END FADE-IN-OUT MODAL */
+
+
+/* .fade-in-topbar {
+    opacity: 1;
+    animation: fadeIntopbar 0.5s 1;
+}
+@keyframes fadeIntopbar {
+    0% { 
+        opacity: 0; 
+        transform: translateY(-10px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+.fade-out-topbar {
+    opacity: 0;
+    animation: fadeOuttopbar 0.5s 1;
+}
+@keyframes fadeOuttopbar {
+    0% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateY(-10);
+    }
+} */
