@@ -61,7 +61,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/defect/count', "AdminController@DefectCount")->Name('DefectCount');
     Route::post('/defect/add', "AdminController@DefectAdd")->Name('DefectAdd');
     Route::post('/defect/delete', "AdminController@DefectDelete")->Name('DefectDelete');
-    Route::get('/checklist/{project_name}/get/export/{index}', "AdminController@ProjectExport")->Name('ProjectExport');
+    Route::get('/checklist/{project_name}/get/export/{defect_id}/{index}', "AdminController@ProjectExport")->Name('ProjectExport');
     Route::get('/checklist/{project_code}/{index}', "AdminController@ChecklistSelected")->Name('ChecklistSelected')->middleware('redirectIfAuth');
     Route::get('/checklist/{project_code}/{index}/search', "AdminController@SearchChecklists")->Name('SearchChecklists')->middleware('redirectIfAuth');
     Route::post('/comment/add', "AdminController@CommentAdd")->Name('CommentAdd_Admin');

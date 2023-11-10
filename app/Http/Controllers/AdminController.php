@@ -1054,12 +1054,12 @@ class AdminController extends Controller
         return response()->json($checklist_comment, $statusCode);
     }
 
-    public function ProjectExport(Request $request, $project_id='', $index='') {
+    public function ProjectExport($project_id='', $defect_id='', $index='') {
         $project = Projects::where('id', '=', $project_id)->first();
 
         Session::put('index', $index);
 
-        return Excel::download(new ProjectExport($project_id, $index), 'Export_Defect-' . $index . '_' . $project->project_name . '.xlsx');
+        return Excel::download(new ProjectExport($project_id, $defect_id), 'Export_Defect-' . $index . '_' . $project->project_name . '.xlsx');
     }
 
     public function CommentLog(Request $request) {

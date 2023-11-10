@@ -25,7 +25,7 @@
                         @if(Session::get('role') == '2')
                             @if(sizeof($checklists_paginate))
                                 <a class="bg-green-500 font-medium px-1 rounded-md text-white flex items-center hover:bg-green-600 duration-150 w-fit"
-                                href="{{ Route('ProjectExport', [$projects->id, Session::get('defect_id')]) }}" target="_blank">
+                                href="{{ Route('ProjectExport', [$projects->id, Session::get('defect_id'), Session::get('index')]) }}" target="_blank">
                                     <i class='bx bxs-file-export'></i>&nbsp;EXCEL
                                 </a>
                             @else
@@ -67,7 +67,7 @@
                     @if(Session::get('role') == '2')
                         @if($checklists_paginate)
                             <a class="bg-green-500 font-medium p-1 rounded-md text-white flex items-center hover:bg-green-600 duration-150 w-fit"
-                            href="{{ Route('ProjectExport', [$projects->id, Session::get('defect_id')]) }}" target="_blank">
+                            href="{{ Route('ProjectExport', [$projects->id, Session::get('defect_id'), Session::get('index')]) }}" target="_blank">
                                 <i class='bx bxs-file-export'></i>&nbsp;EXCEL
                             </a>
                         @else
