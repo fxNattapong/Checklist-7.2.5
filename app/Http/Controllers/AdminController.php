@@ -1059,7 +1059,15 @@ class AdminController extends Controller
 
         Session::put('index', $index);
 
-        return Excel::download(new ProjectExport($project_id, $defect_id), 'Export_Defect-' . $index . '_' . $project->project_name . '.xlsx');
+        $defect = Projects::where('id', '=', $defect_id)->first();
+
+        if($defect->status == '1') {
+            return Excel::download(new ProjectExport($project_id, $defect_id), 'Export_Defect-Done' . '_' . $project->project_name . '.xlsx');
+        } else {
+            return Excel::download(new ProjectExport($project_id, $defect_id), 'Export_Defect-' . $index . '_' . $project->project_name . '.xlsx');
+        }
+
+        
     }
 
     public function CommentLog(Request $request) {
